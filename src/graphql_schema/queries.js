@@ -1,3 +1,4 @@
+//Queries for Retrieval Operations
 export default `
 type Query {
     getOrganization(_id: ID!): Organizations
@@ -9,4 +10,4 @@ type Query {
     getEvent(_id: ID!): Events
     allEvents: [Events]
    }
-`
+`;

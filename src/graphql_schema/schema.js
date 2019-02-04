@@ -11,10 +11,10 @@ const typeDefs = `
  type Organizations {
   _id: ID!
   name: String!
-  createdAt: String!
-  updatedAt: String!
+  createdAt: String
+  updatedAt: String
   loc: Locations
-  event: Events
+  eve: Events
  }
 
  type Locations {
@@ -23,30 +23,31 @@ const typeDefs = `
   address: String
   latitude: String
   longitude: String
-  createdAt: String!
-  updatedAt: String!
+  createdAt: String
+  updatedAt: String
   org : Organizations
  }
 
  type Events {
-  _id: ID!
+  _id: ID
   name: String!
   date: String!
   time: String!
   description: String
-  createdAt: String!
-  updatedAt: String!
-  org : ID
-  orgList : Organizations  
+  createdAt: String
+  updatedAt: String
+  org : Organizations
  }
 
- ${Query}
+${Query}
 
  input OrganizationsInput {
-  _id: ID!
+  _id: ID
   name: String!
-  createdAt: String!
-  updatedAt: String!
+  createdAt: String
+  updatedAt: String
+  loc: ID
+  eve: ID
  }
 
  input LocationsInput{
@@ -59,23 +60,22 @@ const typeDefs = `
  }
 
  input EventsInput {
-  _id: ID!
+  _id: ID
   name: String!
-  date: String!
-  time: String!
-  description: String!
-  createdAt: String!
-  updatedAt: String!
+  date: String
+  time: String
+  description: String
+  createdAt: String
+  updatedAt: String
   org: ID
  }
-
 
 ${Mutation}
 `;
 
 const schema = makeExecutableSchema({
-    typeDefs,
-    resolvers: merge(organizationResolver, locationsResolver, eventsResolver),
+	typeDefs,
+	resolvers: merge(organizationResolver, locationsResolver, eventsResolver),
 });
 
 export default schema;

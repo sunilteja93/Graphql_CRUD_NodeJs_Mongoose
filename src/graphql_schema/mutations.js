@@ -1,3 +1,4 @@
+//Mutations for Update, Delete and Create Operations
 export default `
 type Mutation {
     createLocation(input: LocationsInput) : Locations
@@ -5,11 +6,11 @@ type Mutation {
     deleteLocation(_id: ID!) : Locations
 
     createOrganization(input: OrganizationsInput) : Organizations
-    updateOrganization(_id: ID!, input: OrganizationsInput): Organizations
+    updateOrganization(input: OrganizationsInput): Organizations
     deleteOrganization(_id: ID!) : Organizations
 
     createEvent(input: EventsInput) : Events
-    updateEvent(_id: ID!, input: EventsInput): Events
+    updateEvent(input: EventsInput): Events
     deleteEvent(_id: ID!) : Events
    }
-`
+`;
