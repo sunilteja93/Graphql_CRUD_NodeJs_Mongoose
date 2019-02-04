@@ -7,7 +7,7 @@ const app = express();
 const PORT = 3000;
 
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/gql1_db');
+mongoose.connect('mongodb://localhost/gql_demo_db');
 
 app.get('/', (req, res) => {
     res.json({
