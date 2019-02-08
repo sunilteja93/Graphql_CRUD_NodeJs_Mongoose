@@ -12,7 +12,7 @@ export const locationsResolver = {
 			return await Locations.findById(_id).populate('org').exec();
 		},
 		async allLocations() {
-			var locs = await Locations.find().populate('org').exec();
+			const locs = await Locations.find().populate('org').exec();
 			return locs;
 		}
 	},
@@ -28,7 +28,7 @@ export const locationsResolver = {
 					console.log(err); 
 				});
 
-			var res = await Locations.create(input);
+			const res = await Locations.create(input);
 			return await Locations.findById(res._id).populate('org').exec();
 		},
 		async updateLocation(root, { input }) {
