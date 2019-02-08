@@ -6,13 +6,13 @@ export const eventsResolver = {
 			return await Events.findById(_id).populate('org');
 		},
 		async allEvents(){
-			var locs = await (Events.find().populate('org')).exec();
+			const locs = await (Events.find().populate('org')).exec();
 			return locs			
 		}
 	},
 	Mutation: {
 		async createEvent(root, {input}){
-			var res=await Events.create(input);
+			const res = await Events.create(input);
 			return await Events.findById(res._id).populate('org').exec();
 		},
 		async updateEvent(root, {input}){
