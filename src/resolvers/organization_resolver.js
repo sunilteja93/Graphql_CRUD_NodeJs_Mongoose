@@ -11,7 +11,7 @@ export  const organizationResolver = {
 	},
 	Mutation: {
 		async createOrganization(root, {input}){
-			var res=await Organizations.create(input);
+			const res=await Organizations.create(input);
 			return await Organizations.findById(res._id).populate('loc').populate('eve').exec();
 		},
 		async updateOrganization(root, {input}){
