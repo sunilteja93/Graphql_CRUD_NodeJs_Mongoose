@@ -21,8 +21,8 @@ export const locationsResolver = {
 			const result = await googleMapsClient.geocode({ address: input.address });
 			await result.asPromise()
 				.then((response) => {
-					input['latitude'] = response.json.results[0].geometry.location.lat
-					input['longitude'] = response.json.results[0].geometry.location.lng
+					input.latitude = response.json.results[0].geometry.location.lat
+					input.longitude = response.json.results[0].geometry.location.lng
 				})
 				.catch((err) => {
 					console.log(err); 
