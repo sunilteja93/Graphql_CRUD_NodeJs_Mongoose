@@ -20,7 +20,7 @@
     "eslint": "^5.13.0",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-plugin-import": "^2.16.0",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "express-graphql": "^0.6.12",
     "graphql": "^14.1.1",
     "graphql-tools": "^2.23.1",
@@ -33,7 +33,7 @@
   },
   "dependencies": {
     "@google/maps": "^0.5.5",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "express-graphql": "^0.6.12",
     "graphql": "^14.1.1",
     "graphql-tools": "^2.23.1",
